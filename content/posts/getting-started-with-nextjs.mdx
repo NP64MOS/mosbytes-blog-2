@@ -1,0 +1,81 @@
+# Getting Started with Next.js 13
+
+<Alert color="blue">
+  This guide will help you understand the key concepts of Next.js 13 and the new App Router.
+</Alert>
+
+Next.js 13 introduces several groundbreaking features that make web development even more enjoyable. Let's explore the major highlights:
+
+## 1. The New App Router 🚀
+
+The App Router is a **game-changing feature** that brings:
+
+- Server Components by default
+- Nested layouts and routes
+- Server-side data fetching
+- Streaming with Suspense
+
+Here's a basic example of a Next.js 13 page component:
+
+```tsx
+// app/page.tsx
+export default function HomePage() {
+  return (
+    <div className="container mx-auto">
+      <h1>Welcome to my site!</h1>
+    </div>
+  );
+}
+```
+
+## 2. Server Components ⚡️
+
+Server Components are the default in Next.js 13. They offer several benefits:
+
+- Smaller client-side JavaScript bundle
+- Better initial page load
+- SEO-friendly by default
+
+<Alert color="green">
+  💡 Tip: Use the "use client" directive only when you need client-side interactivity!
+</Alert>
+
+## 3. Data Fetching
+
+Next.js 13 simplifies data fetching:
+
+```tsx
+// app/posts/page.tsx
+async function getPosts() {
+  const res = await fetch('https://api.example.com/posts');
+  return res.json();
+}
+
+export default async function PostsPage() {
+  const posts = await getPosts();
+  return (
+    <div>
+      {posts.map(post => (
+        <article key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.excerpt}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+```
+
+<Alert color="yellow">
+  Note: Make sure to handle loading and error states appropriately!
+</Alert>
+
+## Further Resources
+
+Want to learn more? Check out these resources:
+
+1. [Next.js Documentation](https://nextjs.org/docs)
+2. [React Server Components](https://react.dev/blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023#react-server-components)
+3. [App Router Migration Guide](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration)
+
+Happy coding! 🎉

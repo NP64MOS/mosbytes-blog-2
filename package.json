@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@material-tailwind/react": "^2.1.4",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.4.6",
     "better-sqlite3": "^12.2.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "next": "15.4.6",
     "next-mdx-remote": "^5.0.0",
@@ -22,14 +25,17 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.19.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/sqlite3": "^3.1.11",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4",

@@ -1,33 +1,80 @@
-import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+import { NextResponse } from 'next/server';
+import { openDB } from '@/lib/db';
+import { serialize } from 'next-mdx-remote/serialize';
+import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
-export async function POST(req: NextRequest) {
+export async function POST(request: Request) {
   try {
-    const { title, date, content } = await req.json();
+    const { title, slug, excerpt, content, published } = await request.json();
+
+    // Validate required fields
     if (!title || !content) {
-      return NextResponse.json({ error: "Title and content are required" }, { status: 400 });
+      return NextResponse.json(
+        { message: 'Title and content are required' },
+        { status: 400 }
+      );
     }
 
-    const slug = title.toLowerCase().replace(/\s+/g, "-");
-    const postsDir = path.join(process.cwd(), "content", "posts");
+    // Generate slug if not provided
+    const postSlug = slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-    if (!fs.existsSync(postsDir)) fs.mkdirSync(postsDir, { recursive: true });
+    // Validate and serialize MDX content
+    try {
+      await serialize(content, {
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+          rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+        },
+      });
+    } catch (err) {
+      return NextResponse.json(
+        { message: 'Invalid MDX content' },
+        { status: 400 }
+      );
+    }
 
-    const filePath = path.join(postsDir, `${slug}.mdx`);
-    const fileContent = `---
-title: "${title}"
-date: "${date}"
----
+    const db = await openDB();
 
-${content}
-`;
+    // Check if slug is already taken
+    const existingPost = await db.get(
+      'SELECT id FROM posts WHERE slug = ?',
+      [postSlug]
+    );
 
-    fs.writeFileSync(filePath, fileContent);
+    if (existingPost) {
+      return NextResponse.json(
+        { message: 'A post with this slug already exists' },
+        { status: 409 }
+      );
+    }
 
-    return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Failed to create post" }, { status: 500 });
+    // Insert new post
+    await db.run(
+      `INSERT INTO posts (
+        title, slug, content, excerpt, published, 
+        created_at, updated_at, published_at
+      ) VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?)`,
+      [
+        title,
+        postSlug,
+        content,
+        excerpt || null,
+        published ? 1 : 0,
+        published ? "datetime('now')" : null,
+      ]
+    );
+
+    return NextResponse.json({ 
+      message: 'Post created successfully',
+      slug: postSlug
+    });
+  } catch (error) {
+    console.error('Error creating post:', error);
+    return NextResponse.json(
+      { message: 'Error creating post' },
+      { status: 500 }
+    );
   }
 }

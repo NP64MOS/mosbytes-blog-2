@@ -1,37 +1,41 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
+import { Card, Typography } from "@/components/ui-components";
+import { getPosts } from "@/lib/getPosts";
+import { format } from "date-fns";
 
-export default function BlogListPage() {
-  const postsDir = path.join(process.cwd(), "content", "posts");
-  let files: string[] = [];
-  if (fs.existsSync(postsDir)) files = fs.readdirSync(postsDir);
+export const revalidate = 3600; // Revalidate every hour
 
-  const posts = files
-    .map((file) => {
-      const mdx = fs.readFileSync(path.join(postsDir, file), "utf-8");
-      const match = mdx.match(/---\s*title:\s*"(.*?)"\s*date:\s*"(.*?)"/s);
-      if (!match) return null;
-      const slug = file.replace(/\.mdx$/, "");
-      return { title: match[1], date: match[2], slug };
-    })
-    .filter(Boolean)
-    .sort((a, b) => (a!.date < b!.date ? 1 : -1));
+export default async function BlogListPage() {
+  const posts = await getPosts({ published: true });
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-6">All Blog Posts</h1>
-      <div className="flex flex-col gap-4">
+    <div className="max-w-4xl mx-auto p-8">
+      <Typography variant="h2" className="font-bold mb-8">
+        Blog Posts
+      </Typography>
+      <div className="grid gap-6">
         {posts.map((post) => (
-          <Link
-            key={post!.slug}
-            href={`/blog/${post!.slug}`}
-            className="block p-4 bg-white rounded-lg shadow hover-lift transition"
-          >
-            <h2 className="text-xl font-bold">{post!.title}</h2>
-            <p className="text-gray-500 text-sm">{post!.date}</p>
+          <Link key={post.slug} href={`/blog/${post.slug}`}>
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <Typography variant="h4" className="mb-2">
+                {post.title}
+              </Typography>
+              {post.excerpt && (
+                <Typography variant="paragraph" className="mb-4 text-gray-600">
+                  {post.excerpt}
+                </Typography>
+              )}
+              <Typography variant="small" className="text-gray-500">
+                {format(new Date(post.published_at || post.created_at), 'MMMM d, yyyy')}
+              </Typography>
+            </Card>
           </Link>
         ))}
+        {posts.length === 0 && (
+          <Typography className="text-center text-gray-500">
+            No posts published yet.
+          </Typography>
+        )}
       </div>
     </div>
   );
