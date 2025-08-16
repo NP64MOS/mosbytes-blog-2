@@ -14,12 +14,12 @@ export default function LandingPage() {
           Helping you start, grow, and thrive with practical tech tips, AI tools, 
           and strategies—so you can focus on <strong>building the business you love.</strong>
         </p>
-        <Link
+        {/* <Link
           href="/blog"
           className="px-6 py-3 bg-gray-200 text-white rounded-xl shadow hover-lift inline-block font-semibold"
         >
           Explore Blog
-        </Link>
+        </Link> */}
       </section>
 
       {/* Problem */}

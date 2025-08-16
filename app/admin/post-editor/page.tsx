@@ -15,6 +15,15 @@ export default function PostEditorPage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [preview, setPreview] = useState(false);
 
+  // Add custom styles for the editor layout
+  const editorStyles = {
+    container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8",
+    mainContent: "grid grid-cols-1 gap-6",
+    editorSection: "w-full",
+    previewSection: "w-full bg-white rounded-lg shadow",
+    textareaBase: "w-full min-h-[500px] font-mono",
+  };
+
   const generateSlug = useCallback((title: string) => {
     return title
       .toLowerCase()
@@ -59,7 +68,7 @@ export default function PostEditorPage() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-8">
+    <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
       <div className="flex justify-between items-center mb-6">
         <Typography variant="h3" className="font-bold">Write a New Post</Typography>
         <Button
@@ -79,48 +88,57 @@ export default function PostEditorPage() {
       )}
 
       {preview ? (
-        <Card className="p-6">
+        <Card className="p-6 bg-white rounded-lg shadow">
           <Typography variant="h4" className="mb-4">{title}</Typography>
           <MDXPreview content={content} />
         </Card>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <Input
-            type="text"
-            label="Post Title"
-            value={title}
-            onChange={handleTitleChange}
-            required
-            size="lg"
-          />
-          <Input
-            type="text"
-            label="URL Slug"
-            value={slug}
-            onChange={(e) => setSlug(e.target.value)}
-            required
-            size="lg"
-          />
-          <Textarea
-            label="Excerpt"
-            value={excerpt}
-            onChange={(e) => setExcerpt(e.target.value)}
-            rows={2}
-          />
-          <Textarea
-            label="Content (MDX)"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            rows={20}
-            className="font-mono"
-          />
-          <div className="flex justify-end gap-4">
+        <form onSubmit={handleSubmit}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="space-y-6">
+              <Input
+                type="text"
+                label="Post Title"
+                value={title}
+                onChange={handleTitleChange}
+                required
+                size="lg"
+                className="w-full"
+              />
+              <Input
+                type="text"
+                label="URL Slug"
+                value={slug}
+                onChange={(e) => setSlug(e.target.value)}
+                required
+                size="lg"
+                className="w-full"
+              />
+              <Textarea
+                label="Excerpt"
+                value={excerpt}
+                onChange={(e) => setExcerpt(e.target.value)}
+                rows={3}
+                className="w-full"
+              />
+            </div>
+            <div>
+              <Textarea
+                label="Content (MDX)"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                rows={25}
+                className="w-full font-mono bg-gray-50 p-4"
+              />
+            </div>
+          </div>
+          <div className="flex justify-end gap-4 mt-6">
             <Button
               type="submit"
               disabled={status === "loading"}
-              className="mt-4"
+              className="px-6"
             >
-              {status === "loading" ? "Creating..." : "Create Post"}
+              Save Draft
             </Button>
           </div>
         </form>

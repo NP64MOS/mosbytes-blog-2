@@ -6,8 +6,15 @@ import BlogPostContent from "./BlogPostContent";
 
 export const revalidate = 3600; // Revalidate every hour
 
+async function generateParams(params: { slug: string }) {
+  return {
+    slug: await Promise.resolve(params.slug)
+  };
+}
+
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await generateParams(params);
+  const post = await getPostBySlug(slug);
 
   if (!post || !post.published) {
     notFound();
