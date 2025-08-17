@@ -7,7 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 export async function POST(request: Request) {
   try {
-    const { title, slug, excerpt, content, published } = await request.json();
+    const { title, slug, excerpt, content, published, published_at } = await request.json();
 
     // Validate required fields
     if (!title || !content) {
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
         content,
         excerpt || null,
         published ? 1 : 0,
-        published ? "datetime('now')" : null,
+        published_at ? "datetime('now')" : null,
       ]
     );
 

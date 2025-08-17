@@ -12,6 +12,7 @@ export default function PostEditorPage() {
   const [slug, setSlug] = useState("");
   const [excerpt, setExcerpt] = useState("");
   const [content, setContent] = useState("");
+  const [published, setPublished] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [preview, setPreview] = useState(false);
 
@@ -50,7 +51,7 @@ export default function PostEditorPage() {
           slug,
           excerpt,
           content,
-          published: false 
+          published 
         }),
       });
       
@@ -132,13 +133,22 @@ export default function PostEditorPage() {
               />
             </div>
           </div>
+          <div className="flex items-center gap-4 mb-6">
+            <Typography>Published:</Typography>
+            <input
+              type="checkbox"
+              checked={published}
+              onChange={(e) => setPublished(e.target.checked)}
+              className="w-4 h-4"
+            />
+          </div>
           <div className="flex justify-end gap-4 mt-6">
             <Button
               type="submit"
               disabled={status === "loading"}
               className="px-6"
             >
-              Save Draft
+              { status === "loading" ? "Publishing..." : published === true ? "Publish Post" : "Save Draft" }
             </Button>
           </div>
         </form>
