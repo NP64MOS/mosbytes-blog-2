@@ -1,6 +1,6 @@
 import { Alert } from './Alert';
 import { Button } from '@material-tailwind/react';
-import { CodeBlock } from './CodeBlock';
+import CodeBlock from '@/app/components/CodeBlock';
 
 export const MDXComponents = {
   Alert,

@@ -5,44 +5,52 @@ import MDXContentClient from './mdx-content.client';
 const content = `
 # Welcome to MOSBytes 🚀
 
-I'm passionate about creating high-quality content that helps developers build better software. This blog focuses on:
+Hi, I’m Mos. This is my little corner of the internet where I explore, experiment, and share how technology—especially **AI** 🤖—can make life and work smarter. MOSBytes is for developers, creators, and lifelong learners who want to:
+
+- Build better projects  
+- Solve real problems  
+- Stay ahead in the fast-moving world of tech
 
 <Alert color="blue">
-  Modern web development, React.js, Next.js, and TypeScript best practices.
+💡 Focus: Modern web development, React.js, Next.js, TypeScript, AI tools, and productivity hacks.
 </Alert>
 
-## Our Mission
+## What I Believe
 
-We believe in:
+- **Smart Work > Hard Work** – Use tools and tech to make your life easier ⚡  
+- **Hands-On Learning** – Experiment, build, and share knowledge that works in the real world 🛠️  
+- **Code & AI Together** – Combine programming with AI to solve complex problems efficiently 🤹‍♂️  
+- **Community & Growth** – Learning is better when shared 🌱  
 
-- **Clean Code**: Writing maintainable, well-documented code
-- **Best Practices**: Following industry standards and patterns
-- **Modern Tools**: Leveraging the latest technologies effectively
-- **Community**: Sharing knowledge and learning together
+## Why MOSBytes
 
-## Features
+Here, you’ll find tutorials, tips, and experiments built to help you:
 
-This blog is built with:
-
-- ⚡️ Next.js App Router
-- 📝 MDX for rich content
-- 🎨 Material Tailwind UI
-- 🗃️ SQLite database
-- 📨 Newsletter integration
+- Write cleaner, maintainable code 🧹  
+- Learn modern frameworks and libraries effectively 📚  
+- Apply AI in everyday coding and productivity 🧠  
+- Stay curious, learn faster, and create more ✨  
 
 <Alert color="green">
-  Join our newsletter to stay updated with the latest articles and tutorials!
+📬 Join the newsletter to get practical tutorials and AI-powered tips straight to your inbox!
 </Alert>
 
-## Get in Touch
+## Fun Fact 🤓
 
-Have questions or suggestions? Feel free to reach out through:
+- I drink **way too much coffee ☕** while coding  
+- I experiment with **AI prompts daily**  
+- Sometimes I write code just for the joy of it! 🎉  
 
-- GitHub Issues
-- Twitter DMs
-- Email newsletter
+## Let’s Connect
 
-Let's build something amazing together! 🌟
+Got ideas, questions, or cool projects to share? Reach out via:
+
+- GitHub 🐱  
+- Twitter 🐦  
+- Email newsletter ✉️  
+
+Let’s learn, build, and innovate together! 🌟
+
 `;
 
 export default async function MDXContent() {

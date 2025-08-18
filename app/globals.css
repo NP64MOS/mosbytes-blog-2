@@ -5,7 +5,7 @@
   --bg-light: #e1ecf8;          /* background หลัก */
   --bg-card: #ffffff;           /* card / section */
   --text-primary: #111827;      /* main text */
-  --text-secondary: #6b7280;    /* subtitle / description */
+  --text-secondary: #575757;    /* subtitle / description */
   --accent: #3872c9;            /* CTA / highlight */
   --accent-hover: #08193d;      /* CTA hover */
 }

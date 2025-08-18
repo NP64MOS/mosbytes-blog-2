@@ -16,7 +16,7 @@ export function CodeBlock({ children, className }: CodeBlockProps) {
           {language}
         </div>
       )}
-      <pre className={`${className} rounded-lg bg-gray-900 p-4 overflow-x-auto`}>
+      <pre className={`${className} rounded-lg bg-gray-900  text-amber-50 p-4 overflow-x-auto`}>
         {children}
       </pre>
     </div>

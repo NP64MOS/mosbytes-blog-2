@@ -30,6 +30,7 @@ export default function Navbar() {
         <nav className="flex items-center space-x-6">
           <Link href="/" className="text-gray-600 hover:text-blue-600 hidden md:block">Home</Link>
           <Link href="/blog" className="text-gray-600 hover:text-blue-600 hidden md:block">Blog</Link>
+          <Link href="/about" className="text-gray-600 hover:text-blue-600 hidden md:block">About Us</Link>
         </nav>
       </div>
     </header>
