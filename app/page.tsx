@@ -56,7 +56,7 @@ export default function LandingPage() {
       {/* Hero */}
       <AnimatedSection className="text-center py-28 md:py-36 px-4 relative z-10">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient-x">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient-x">
             MOSBytes 🚀
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10">
@@ -107,11 +107,11 @@ export default function LandingPage() {
             />
             <FeatureCard
               title="2. ลงมือทำ 🛠️"
-              description="ลองใช้ AI Prompts และสร้างโปรเจกต์จริง"
+              description="ลองใช้ AI Prompts และ สร้างโปรเจกต์จริง"
             />
             <FeatureCard
               title="3. เติบโต 🌱"
-              description="สร้างผลงาน แบ่งปันความรู้ และต่อยอดทักษะของคุณ"
+              description="สร้างผลงาน แบ่งปันความรู้และ ต่อยอดทักษะของคุณ"
             />
           </div>
         </SectionWrapper>
@@ -125,7 +125,7 @@ export default function LandingPage() {
           </h2>
           <Link
             href="/blog"
-            className="px-8 py-4 bg-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl hover:bg-purple-800 transform hover:-translate-y-1 transition-all duration-300 inline-block font-semibold"
+            className="px-8 py-4 bg-blue-600 text-white rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-800 transform hover:-translate-y-1 transition-all duration-300 inline-block font-semibold"
           >
             เข้าสู่บล็อก
           </Link>

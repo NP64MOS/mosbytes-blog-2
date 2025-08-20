@@ -41,7 +41,7 @@ export default function NewsletterForm() {
     <div className="max-w-md mx-auto">
       <form 
         onSubmit={handleSubscribe} 
-        className="flex items-center bg-white rounded-xl shadow-md p-2 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2 transition-all duration-300"
+        className="flex items-center bg-white rounded-xl shadow-md p-2 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 transition-all duration-300"
       >
         <div className="relative flex-1">
           <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -57,7 +57,7 @@ export default function NewsletterForm() {
         </div>
         <button
           type="submit"
-          className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold shadow-sm hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 disabled:bg-purple-400 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center min-w-[130px]"
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-sm hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 disabled:bg-blue-400 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center min-w-[130px]"
           disabled={status === 'loading'}
         >
           {status === 'loading' ? (

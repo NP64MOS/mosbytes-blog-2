@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
+            <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
               MOSBytes
             </Link>
           </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-base font-medium transition-colors ${
                   pathname === link.href
-                    ? 'text-purple-600'
+                    ? 'text-blue-600'
                     : 'text-gray-500 hover:text-gray-900'
                 }`}
               >
@@ -54,7 +54,7 @@ export default function Navbar() {
             <button
               onClick={toggleMenu}
               aria-label="Toggle menu"
-              className="text-gray-800 hover:text-purple-600 focus:outline-none"
+              className="text-gray-800 hover:text-blue-600 focus:outline-none"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -78,7 +78,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`block w-full text-center py-2 transition-colors text-lg rounded-md ${
                     pathname === link.href
-                      ? 'text-purple-600 font-semibold bg-purple-50'
+                      ? 'text-blue-600 font-semibold bg-blue-50'
                       : 'text-gray-600 hover:bg-gray-100'
                   }`}
                 >

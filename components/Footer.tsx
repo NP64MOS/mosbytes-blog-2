@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-4">
-            <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
+            <Link href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
               MOSBytes
             </Link>
             <p className="text-gray-700 text-base max-w-md">
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-purple-600 text-white shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 ease-in-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+        className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
         aria-label="Back to top"
       >
         <ArrowUpIcon className="h-6 w-6" />
