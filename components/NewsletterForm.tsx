@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Alert, Button, Input } from "@/components/ui-components";
+import { motion, AnimatePresence } from "framer-motion";
 
-export function NewsletterForm() {
+export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    setMessage(""); // Clear previous messages
 
     try {
       const res = await fetch("/api/newsletter/subscribe", {
@@ -19,53 +20,92 @@ export function NewsletterForm() {
         body: JSON.stringify({ email }),
       });
 
+      // Try to parse JSON regardless of status, as error details might be in the body
+      const data = await res.json().catch(() => ({}));
+
       if (res.ok) {
         setStatus("success");
-        setMessage("Thanks for subscribing! 🎉");
+        setMessage(data.message || "🎉 Subscribed! Welcome aboard.");
         setEmail("");
       } else {
-        const data = await res.json();
-        throw new Error(data.error || "Failed to subscribe");
+        setStatus("error");
+        setMessage(data.error || "Oops! Something went wrong. Please try again.");
       }
-    } catch (err) {
+    } catch (error) {
       setStatus("error");
-      setMessage((err as Error).message);
+      setMessage("An unexpected error occurred. Please try again later.");
     }
   };
 
   return (
-    <div className="bg-white p-8 rounded-xl shadow-sm">
-      <h3 className="text-xl font-bold mb-4">
-        Subscribe to the Newsletter
-      </h3>
-      <p className="text-gray-600 mb-6">
-        Get the latest posts delivered right to your inbox.
-      </p>
-
-      {(status === "success" || status === "error") && (
-        <Alert color={status === "success" ? "green" : "red"} className="mb-4">
-          {message}
-        </Alert>
-      )}
-
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <Input
-          type="email"
-          label="Email Address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="flex-1"
-          disabled={status === "loading"}
-        />
-        <Button
+    <div className="max-w-md mx-auto">
+      <form 
+        onSubmit={handleSubscribe} 
+        className="flex items-center bg-white rounded-xl shadow-md p-2 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2 transition-all duration-300"
+      >
+        <div className="relative flex-1">
+          <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-3 pl-10 bg-transparent focus:outline-none text-gray-700 disabled:text-gray-400"
+            required
+            disabled={status === 'loading'}
+          />
+        </div>
+        <button
           type="submit"
-          disabled={status === "loading"}
-          variant={status === "loading" ? "outlined" : "filled"}
+          className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold shadow-sm hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 disabled:bg-purple-400 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center min-w-[130px]"
+          disabled={status === 'loading'}
         >
-          {status === "loading" ? "Subscribing..." : "Subscribe"}
-        </Button>
+          {status === 'loading' ? (
+            <>
+              <SpinnerIcon className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" />
+              <span>Subscribing...</span>
+            </>
+          ) : (
+            'Subscribe'
+          )}
+        </button>
       </form>
+      <div className="h-6 mt-2 text-center">
+        <AnimatePresence>
+          {message && (
+            <motion.p
+              key={status}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className={`font-semibold text-sm ${
+                status === "success" ? "text-green-600" : "text-red-500"
+              }`}
+            >
+              {message}
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
+  );
+}
+
+function MailIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
+
+function SpinnerIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
   );
 }

@@ -6,8 +6,8 @@
   --bg-card: #ffffff;           /* card / section */
   --text-primary: #111827;      /* main text */
   --text-secondary: #575757;    /* subtitle / description */
-  --accent: #3872c9;            /* CTA / highlight */
-  --accent-hover: #08193d;      /* CTA hover */
+  --accent: #797979;            /*  CTA / highlight */
+  --accent-hover: #050913;      /* CTA hover */
 }
 
 html {
@@ -44,4 +44,21 @@ a:hover {
   background: linear-gradient(90deg, #2563eb, #4f46e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@layer utilities {
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 5s ease infinite;
+  }
 }
