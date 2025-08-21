@@ -48,9 +48,8 @@ export default function AdminLoginPage() {
             type="password"
             label="Password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
             required
-            size="lg"
           />
           <Button type="submit" className="w-full">
             Login

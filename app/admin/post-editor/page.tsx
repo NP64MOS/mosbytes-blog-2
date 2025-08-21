@@ -110,7 +110,7 @@ export default function PostEditorPage() {
                 type="text"
                 label="URL Slug"
                 value={slug}
-                onChange={(e) => setSlug(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSlug(e.target.value)}
                 required
                 size="lg"
                 className="w-full"
@@ -118,7 +118,7 @@ export default function PostEditorPage() {
               <Textarea
                 label="Excerpt"
                 value={excerpt}
-                onChange={(e) => setExcerpt(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.value)}
                 rows={3}
                 className="w-full"
               />
@@ -127,7 +127,7 @@ export default function PostEditorPage() {
               <Textarea
                 label="Content (MDX)"
                 value={content}
-                onChange={(e) => setContent(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
                 rows={25}
                 className="w-full font-mono bg-gray-50 p-4"
               />
@@ -138,7 +138,7 @@ export default function PostEditorPage() {
             <input
               type="checkbox"
               checked={published}
-              onChange={(e) => setPublished(e.target.checked)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPublished(e.target.checked)}
               className="w-4 h-4"
             />
           </div>

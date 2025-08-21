@@ -11,7 +11,7 @@ export default async function AdminPostsPage() {
   return (
     <div className="max-w-4xl mx-auto p-8">
       <div className="flex justify-between items-center mb-8">
-        <Typography variant="h2" color="blue-gray">Manage Posts</Typography>
+        <Typography variant="h2" className="text-blue-gray">Manage Posts</Typography>
         <Link href="/admin/post-editor">
           <Button>New Post</Button>
         </Link>
@@ -26,13 +26,13 @@ export default async function AdminPostsPage() {
                   {post.title}
                 </Typography>
                 {post.excerpt && (
-                  <Typography variant="small" color="gray" className="mb-2">
+                  <Typography variant="small" className="mb-2 text-gray-600">
                     {post.excerpt}
                   </Typography>
                 )}
                 <div className="flex gap-4 text-sm text-gray-500">
                   <time>
-                    Created: {format(new Date(post.created_at), 'MMM d, yyyy')}
+                    Created: {format(new Date(post.created_at || new Date()), 'MMM d, yyyy')}
                   </time>
                   <span>•</span>
                   <div className={post.published ? 'text-green-500' : 'text-amber-500'}>

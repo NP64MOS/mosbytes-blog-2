@@ -58,7 +58,7 @@ export async function getPostBySlug(slug: string): Promise<PostMetadata | null> 
   }
 }
 
-export async function getPosts(): Promise<PostMetadata[]> {
+export async function getPosts(filter?: { published?: boolean }): Promise<PostMetadata[]> {
   const posts: PostMetadata[] = [];
 
   // Get MDX files first
@@ -95,8 +95,11 @@ export async function getPosts(): Promise<PostMetadata[]> {
     const db = await initDb();
     if (!db) throw new Error('Database not initialized');
 
+    const where = typeof filter?.published === 'boolean' ? 'WHERE published = ?' : '';
+    const params = typeof filter?.published === 'boolean' ? [filter.published ? 1 : 0] : [];
     const dbPosts = await db.all<PostMetadata[]>(
-      'SELECT * FROM posts WHERE published = 1 ORDER BY published_at DESC'
+      `SELECT * FROM posts ${where} ORDER BY COALESCE(published_at, updated_at) DESC`,
+      params
     );
 
     if (dbPosts) {

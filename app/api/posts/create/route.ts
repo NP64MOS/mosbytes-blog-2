@@ -62,7 +62,7 @@ export async function POST(request: Request) {
         content,
         excerpt || null,
         published ? 1 : 0,
-        published_at ? "datetime('now')" : null,
+        published ? new Date().toISOString() : null,
       ]
     );
 

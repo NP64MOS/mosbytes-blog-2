@@ -75,7 +75,6 @@ export default function PostEditorPage() {
         </Typography>
         <Button
           variant="outlined"
-          color={preview ? "gray" : "blue"}
           onClick={() => setPreview(!preview)}
         >
           {preview ? "Edit" : "Preview"}
@@ -98,25 +97,25 @@ export default function PostEditorPage() {
           <Input
             label="Title"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)}
             required
           />
           <Input
             label="Slug"
             value={slug}
-            onChange={(e) => setSlug(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSlug(e.target.value)}
             required
           />
           <Textarea
             label="Excerpt"
             value={excerpt}
-            onChange={(e) => setExcerpt(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setExcerpt(e.target.value)}
             rows={3}
           />
           <Textarea
             label="Content (MDX)"
             value={content}
-            onChange={(e) => setContent(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
             rows={20}
             className="font-mono"
           />

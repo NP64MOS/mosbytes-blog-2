@@ -1,12 +1,12 @@
 import { cookies } from 'next/headers';
 
-export function isAuthenticated() {
-  const cookieStore = cookies();
+export async function isAuthenticated() {
+  const cookieStore = await cookies();
   const authToken = cookieStore.get('admin_token');
   return authToken?.value === process.env.ADMIN_TOKEN;
 }
 
-export function getAuthToken() {
-  const cookieStore = cookies();
+export async function getAuthToken() {
+  const cookieStore = await cookies();
   return cookieStore.get('admin_token')?.value;
 }
