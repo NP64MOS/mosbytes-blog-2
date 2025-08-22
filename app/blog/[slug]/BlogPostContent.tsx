@@ -36,7 +36,7 @@ export default function BlogPostContent({ content }: BlogPostContentProps) {
 
   if (!mdxSource) {
     return (
-      <div className="animate-pulse text-gray-500">
+              <div className="animate-pulse text-neutral-500">
         Loading...
       </div>
     );

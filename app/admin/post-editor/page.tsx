@@ -129,7 +129,7 @@ export default function PostEditorPage() {
                 value={content}
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setContent(e.target.value)}
                 rows={25}
-                className="w-full font-mono bg-gray-50 p-4"
+                className="w-full font-mono bg-neutral-50 p-4"
               />
             </div>
           </div>

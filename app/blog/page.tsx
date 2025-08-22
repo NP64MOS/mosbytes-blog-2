@@ -39,7 +39,7 @@ export default async function BlogListPage() {
     <div className="max-w-6xl mx-auto p-8">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text animate-fade-in-up">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-primary-600 animate-fade-in-up">
           บล็อก MOSBytes 📝
         </h1>
         <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
@@ -61,12 +61,12 @@ export default async function BlogListPage() {
               <div className={`w-full h-48 bg-gradient-to-br ${getRandomGradient(post.title)} rounded-t-xl relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-300" />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                  <span className="px-3 py-1 bg-neutral-800/80 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                     📝 บทความ
                   </span>
                 </div>
                 <div className="absolute bottom-4 right-4">
-                  <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">
+                  <span className="px-3 py-1 bg-neutral-800/80 backdrop-blur-sm rounded-full text-white text-sm">
                     ⏱️ {getReadingTime(post.excerpt || post.title)} นาที
                   </span>
                 </div>
@@ -120,11 +120,11 @@ export default async function BlogListPage() {
 
       {/* Newsletter CTA */}
       <div className="mt-20 text-center">
-        <div className="card p-12 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="card-light-blue p-12">
           <h2 className="text-3xl font-bold mb-4 gradient-text">
             อย่าพลาดบทความใหม่! 🚀
           </h2>
-          <p className="text-lg text-neutral-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-medium mb-8 max-w-2xl mx-auto">
             สมัครรับข่าวสารเพื่อรับบทความและเทคนิคล่าสุดจาก MOSBytes
           </p>
           <Link href="/" className="btn btn-primary text-lg px-8 py-4 hover-lift">

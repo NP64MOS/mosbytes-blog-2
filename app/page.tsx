@@ -84,7 +84,7 @@ export default function LandingPage() {
 
             {/* Main Heading */}
             <h1 className="text-6xl md:text-8xl font-bold mb-8 animate-fade-in-up stagger-1">
-              <span className="gradient-text animate-gradient-x">MOSBytes</span>
+              <span className="gradient-text text-primary-600">MOSBytes</span>
               <br />
               <span className="text-4xl md:text-6xl font-light text-neutral-600">
                 🚀
@@ -287,11 +287,11 @@ export default function LandingPage() {
       {/* Newsletter Section */}
       <section className="py-20 px-4 relative bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="card p-12 bg-white/80 backdrop-blur-sm">
+          <div className="card-light p-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
               มาเริ่มต้นไปด้วยกันวันนี้เลย ✨
             </h2>
-            <p className="text-xl text-neutral-600 mb-8 animate-fade-in-up stagger-1">
+            <p className="text-xl text-neutral-medium mb-8 animate-fade-in-up stagger-1">
               รับความรู้และเทคนิคล่าสุดจาก MOSBytes ผ่านอีเมล
             </p>
             

@@ -26,11 +26,11 @@ export default async function AdminPostsPage() {
                   {post.title}
                 </Typography>
                 {post.excerpt && (
-                  <Typography variant="small" className="mb-2 text-gray-600">
+                  <Typography variant="small" className="mb-2 text-neutral-700">
                     {post.excerpt}
                   </Typography>
                 )}
-                <div className="flex gap-4 text-sm text-gray-500">
+                <div className="flex gap-4 text-sm text-neutral-600">
                   <time>
                     Created: {format(new Date(post.created_at || new Date()), 'MMM d, yyyy')}
                   </time>
@@ -53,7 +53,7 @@ export default async function AdminPostsPage() {
         ))}
 
         {posts.length === 0 && (
-          <Typography className="text-center text-gray-500">
+          <Typography className="text-center text-neutral-600">
             No posts yet. Create your first post to get started!
           </Typography>
         )}

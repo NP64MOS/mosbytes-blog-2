@@ -12,7 +12,7 @@ export function CodeBlock({ children, className }: CodeBlockProps) {
   return (
     <div className="relative">
       {language && (
-        <div className="absolute right-4 top-2 text-xs text-gray-400">
+        <div className="absolute right-4 top-2 text-xs text-neutral-400">
           {language}
         </div>
       )}

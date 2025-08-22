@@ -72,7 +72,7 @@ export default function BlogSearch({ posts, categories }: BlogSearchProps) {
           >
             <span>{category.icon}</span>
             <span>{category.label}</span>
-            <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+            <span className="text-xs bg-neutral-800/80 text-white px-2 py-1 rounded-full">
               {category.count}
             </span>
           </button>

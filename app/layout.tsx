@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import "./globals.css";
 import { ReactNode } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
-const inter = Inter({ subsets: ['latin'] });
+import BackToTop from "../components/BackToTop";
 
 // Define a constant for your site's URL
 const siteUrl = 'https://www.your-domain.com'; // Replace with your actual domain
@@ -46,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-white text-gray-900 flex flex-col min-h-screen`}>
+      <body className="bg-white text-gray-900 flex flex-col min-h-screen">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -64,6 +62,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

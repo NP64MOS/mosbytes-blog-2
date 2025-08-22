@@ -44,13 +44,13 @@ export default function NewsletterForm() {
         className="flex items-center bg-white rounded-xl shadow-md p-2 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 transition-all duration-300"
       >
         <div className="relative flex-1">
-          <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+          <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-500" />
           <input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 pl-10 bg-transparent focus:outline-none text-gray-700 disabled:text-gray-400"
+                          className="w-full p-3 pl-10 bg-transparent focus:outline-none text-neutral-700 disabled:text-neutral-500"
             required
             disabled={status === 'loading'}
           />

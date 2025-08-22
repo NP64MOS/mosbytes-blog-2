@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto p-8">
       <div className="text-center mb-12">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text animate-fade-in-up">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-primary-600 animate-fade-in-up">
           เกี่ยวกับ MOSBytes 👋
         </h1>
         <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
@@ -11,31 +11,31 @@ export default function AboutPage() {
       </div>
 
       <div className="prose prose-lg max-w-none">
-        <div className="card p-8 mb-8 animate-fade-in-up stagger-2">
+        <div className="card-light p-8 mb-8 animate-fade-in-up stagger-2">
           <h2 className="text-3xl font-bold mb-6 gradient-text">Welcome to MOSBytes 🚀</h2>
           
-          <p className="text-lg leading-relaxed mb-6">
+          <p className="text-lg leading-relaxed mb-6 text-neutral-dark">
             Hi, I&apos;m Mos. This is my little corner of the internet where I explore, experiment, and share how technology—especially <strong>AI</strong> 🤖—can make life and work smarter. MOSBytes is for developers, creators, and lifelong learners who want to:
           </p>
 
           <ul className="space-y-3 mb-8">
             <li className="flex items-start space-x-3">
               <span className="text-2xl">🚀</span>
-              <span>Build better projects</span>
+              <span className="text-neutral-dark">Build better projects</span>
             </li>
             <li className="flex items-start space-x-3">
               <span className="text-2xl">💡</span>
-              <span>Solve real problems</span>
+              <span className="text-neutral-dark">Solve real problems</span>
             </li>
             <li className="flex items-start space-x-3">
               <span className="text-2xl">📈</span>
-              <span>Stay ahead in the fast-moving world of tech</span>
+              <span className="text-neutral-dark">Stay ahead in the fast-moving world of tech</span>
             </li>
           </ul>
 
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border-l-4 border-blue-500">
-            <h3 className="text-xl font-semibold mb-3">💡 Focus:</h3>
-            <p className="text-neutral-700">
+          <div className="card-light-blue p-6 rounded-xl border-l-4 border-blue-500">
+            <h3 className="text-xl font-semibold mb-3 text-neutral-dark">💡 Focus:</h3>
+            <p className="text-neutral-dark">
               Modern web development, React.js, Next.js, TypeScript, AI tools, and productivity hacks.
             </p>
           </div>
