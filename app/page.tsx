@@ -235,7 +235,7 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
               เริ่มต้นง่าย ๆ แค่ 3 ขั้นตอน 🚀
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto animate-fade-in-up stagger-1">
+            <p className="text-xl text-blue-800 max-w-3xl mx-auto animate-fade-in-up stagger-1">
               กระบวนการเรียนรู้ที่ออกแบบมาให้เข้าใจง่ายและได้ผลจริง
             </p>
           </div>
@@ -325,13 +325,8 @@ export default function LandingPage() {
             {[
               {
                 quote: "MOSBytes ทำให้การเรียนรู้ AI และ Web Development กลายเป็นเรื่องที่ง่าย ใช้ได้จริง และสนุกขึ้นเยอะเลย!",
-                author: "คุณสมชาย",
-                role: "Frontend Developer"
-              },
-              {
-                quote: "เนื้อหาชัดเจน เข้าใจง่าย และสามารถนำไปใช้ได้ทันที ขอบคุณที่แบ่งปันความรู้ดีๆ แบบนี้",
-                author: "คุณสมหญิง",
-                role: "UX Designer"
+                author: "Sontaya",
+                role: "Begining Developer"
               }
             ].map((testimonial, index) => (
               <div key={index} className="card p-8 text-left hover-lift animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
