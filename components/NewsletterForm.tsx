@@ -44,7 +44,7 @@ export default function NewsletterForm() {
         className="flex items-center bg-white rounded-xl shadow-md p-2 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 transition-all duration-300"
       >
         <div className="relative flex-1">
-          <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-500" />
+          <MailIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
           <input
             type="email"
             placeholder="Enter your email"

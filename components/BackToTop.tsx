@@ -7,18 +7,16 @@ export default function BackToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      // Show button when scrolled down more than 300px
       if (window.scrollY > 300) {
+        console.log("cccccccc")
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    // Add event listener
     window.addEventListener("scroll", toggleVisibility);
-    
-    // Cleanup
+
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
@@ -31,14 +29,12 @@ export default function BackToTop() {
     });
   };
 
-  if (!isVisible) {
-    return null;
-  }
-
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+      className={`fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group ${
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
       aria-label="Back to top"
     >
       <svg

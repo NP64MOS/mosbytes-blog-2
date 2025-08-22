@@ -151,7 +151,7 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
               ใช้ AI แล้วยังงงๆ อยู่ใช่ไหม? 🤯
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
               บทเรียนส่วนใหญ่มักกระจัดกระจายและเข้าใจยาก
               จนคุณอาจรู้สึกสับสน นั้นเป็นเรื่องปกติครับ <br />
               <strong className="text-neutral-800">แต่เรามีวิธีที่ง่ายและฉลาดกว่านั้น</strong>
@@ -179,8 +179,8 @@ export default function LandingPage() {
             ].map((item, index) => (
               <div key={index} className="card p-8 text-center hover-lift animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-neutral-600">{item.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-blue-900">{item.title}</h3>
+                <p className="text-blue-800">{item.description}</p>
               </div>
             ))}
           </div>
@@ -188,7 +188,7 @@ export default function LandingPage() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 px-4 relative bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-20 px-4 relative bg-gradient-to-br">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
             ผมขอเป็นไกด์ให้คุณ ✨
@@ -220,8 +220,8 @@ export default function LandingPage() {
             ].map((item, index) => (
               <div key={index} className="card p-8 text-center hover-lift animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-neutral-600">{item.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-blue-900">{item.title}</h3>
+                <p className="text-blue-800">{item.description}</p>
               </div>
             ))}
           </div>
@@ -285,13 +285,13 @@ export default function LandingPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 px-4 relative bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-20 px-4 relative bg-gradient-to-br">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="card-light p-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+          <div className="card p-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 animate-fade-in-up">
               มาเริ่มต้นไปด้วยกันวันนี้เลย ✨
             </h2>
-            <p className="text-xl text-neutral-medium mb-8 animate-fade-in-up stagger-1">
+            <p className="text-xl text-gray-600 mb-8 animate-fade-in-up stagger-1">
               รับความรู้และเทคนิคล่าสุดจาก MOSBytes ผ่านอีเมล
             </p>
             
