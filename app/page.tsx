@@ -151,7 +151,7 @@ export default function LandingPage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
               ใช้ AI แล้วยังงงๆ อยู่ใช่ไหม? 🤯
             </h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
               บทเรียนส่วนใหญ่มักกระจัดกระจายและเข้าใจยาก
               จนคุณอาจรู้สึกสับสน นั้นเป็นเรื่องปกติครับ <br />
               <strong className="text-neutral-800">แต่เรามีวิธีที่ง่ายและฉลาดกว่านั้น</strong>
