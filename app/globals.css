@@ -413,21 +413,7 @@ a:hover {
   outline-offset: 2px;
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-neutral-50: #171717;
-    --color-neutral-100: #262626;
-    --color-neutral-200: #404040;
-    --color-neutral-300: #525252;
-    --color-neutral-400: #737373;
-    --color-neutral-500: #a3a3a3;
-    --color-neutral-600: #d4d4d4;
-    --color-neutral-700: #e5e5e5;
-    --color-neutral-800: #f5f5f5;
-    --color-neutral-900: #fafafa;
-  }
-}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
