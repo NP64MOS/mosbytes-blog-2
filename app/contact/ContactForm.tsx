@@ -8,7 +8,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setStatus("Sending...");
+    setStatus("กำลังส่ง...");
     const formData = new FormData(event.currentTarget);
 
     try {
@@ -26,7 +26,7 @@ const ContactForm = () => {
         setStatus(data.message);
       }
     } catch (error) {
-      setStatus("There was an error sending your message.");
+      setStatus("เกิดข้อผิดพลาดในการส่งข้อความของคุณ");
     }
   };
 
@@ -38,7 +38,7 @@ const ContactForm = () => {
             htmlFor="name"
             className="block text-sm font-medium text-gray-700"
           >
-            Name
+            ชื่อ
           </label>
           <input
             type="text"
@@ -53,7 +53,7 @@ const ContactForm = () => {
             htmlFor="email"
             className="block text-sm font-medium text-gray-700"
           >
-            Email
+            อีเมล
           </label>
           <input
             type="email"
@@ -68,7 +68,7 @@ const ContactForm = () => {
             htmlFor="message"
             className="block text-sm font-medium text-gray-700"
           >
-            Message
+            ข้อความ
           </label>
           <textarea
             id="message"
@@ -83,7 +83,7 @@ const ContactForm = () => {
             type="submit"
             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            Send Message
+            ส่งข้อความ
           </button>
         </div>
       </form>
@@ -97,7 +97,7 @@ const ContactForm = () => {
               rel="noopener noreferrer"
               className="text-indigo-600 hover:text-indigo-800"
             >
-              Preview Email
+              ดูตัวอย่างอีเมล
             </a>
           )}
         </div>

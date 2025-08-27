@@ -19,10 +19,9 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "/", label: "Home", icon: "🏠" },
-    { href: "/blog", label: "Blog", icon: "📝" },
-    { href: "/about", label: "About", icon: "👋" },
-    { href: "/contact", label: "Contact", icon: "📧" },
+    { href: "/", label: "หน้าแรก", icon: "🏠" },
+    { href: "/blog", label: "บล็อก", icon: "📝" },
+    { href: "/about", label: "เกี่ยวกับ", icon: "👋" },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -92,7 +91,7 @@ export default function Navbar() {
                 href="/blog"
                 className="btn btn-primary px-6 py-2 text-sm font-semibold hover-lift"
               >
-                🚀 Get Started
+                🚀 เริ่มต้นเลย
               </Link>
             </div>
 
@@ -151,7 +150,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn btn-primary w-full justify-center"
               >
-                🚀 Get Started
+                🚀 เริ่มต้นเลย
               </Link>
             </div>
           </div>

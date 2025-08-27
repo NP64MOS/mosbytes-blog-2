@@ -167,37 +167,10 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-neutral-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-neutral-400 text-sm">
-              © {currentYear} MOSBytes. สงวนลิขสิทธิ์ทั้งหมด
-            </div>
-
-            {/* Additional Links */}
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-neutral-400 hover:text-white transition-colors duration-300">
-                นโยบายความเป็นส่วนตัว
-              </Link>
-              <Link href="/terms" className="text-neutral-400 hover:text-white transition-colors duration-300">
-                เงื่อนไขการใช้งาน
-              </Link>
-              <Link href="/sitemap" className="text-neutral-400 hover:text-white transition-colors duration-300">
-                แผนผังเว็บไซต์
-              </Link>
-            </div>
+          <div className="text-center text-neutral-400 text-sm">
+            © {currentYear} MOSBytes. สงวนลิขสิทธิ์ทั้งหมด
           </div>
         </div>
-
-        {/* Back to Top Button */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50 flex items-center justify-center"
-          aria-label="กลับขึ้นด้านบน"
-        >
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
-        </button>
       </div>
     </footer>
   );
