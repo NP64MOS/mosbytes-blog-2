@@ -6,58 +6,58 @@ export default function AboutPage() {
           เกี่ยวกับ MOSBytes 👋
         </h1>
         <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-          สวัสดีครับ ผม Mos ที่นี่คือพื้นที่เล็ก ๆ บนโลกอินเทอร์เน็ตที่ผมจะแชร์ความรู้ เทคนิค และไอเดียการพัฒนาเว็บและ AI 🤖
+          สวัสดีครับ ผม Mos ที่นี่ผมจะมาแบ่งปันความรู้และเทคนิคการพัฒนาเว็บไซต์และ AI
         </p>
       </div>
 
       <div className="prose prose-lg max-w-none">
         <div className="card-light p-8 mb-8 animate-fade-in-up stagger-2">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">ยินดีต้อนรับสู่ MOSBytes 🚀</h2>
+          <h2 className="text-3xl font-bold mb-6 gradient-text">Welcome to MOSBytes 🚀</h2>
           
           <p className="text-lg leading-relaxed mb-6 text-neutral-dark">
-            ที่นี่ผมจะเล่าถึงการทดลอง การเรียนรู้ และการใช้เทคโนโลยี—โดยเฉพาะ <strong>AI</strong> 🤖—เพื่อทำให้ชีวิตและการทำงานง่ายและฉลาดขึ้น MOSBytes ถูกสร้างมาเพื่อคนที่อยาก:
+            Hi, I&apos;m Mos. This is my little corner of the internet where I explore, experiment, and share how technology—especially <strong>AI</strong> 🤖—can make life and work smarter. MOSBytes is for developers, creators, and lifelong learners who want to:
           </p>
 
           <ul className="space-y-3 mb-8">
             <li className="flex items-start space-x-3">
               <span className="text-2xl">🚀</span>
-              <span className="text-neutral-dark">สร้างโปรเจกต์ที่ดีกว่าเดิม</span>
+              <span className="text-neutral-dark">Build better projects</span>
             </li>
             <li className="flex items-start space-x-3">
               <span className="text-2xl">💡</span>
-              <span className="text-neutral-dark">แก้ปัญหาจริงได้อย่างมีประสิทธิภาพ</span>
+              <span className="text-neutral-dark">Solve real problems</span>
             </li>
             <li className="flex items-start space-x-3">
               <span className="text-2xl">📈</span>
-              <span className="text-neutral-dark">ตามทันโลกเทคโนโลยีที่เปลี่ยนแปลงเร็ว</span>
+              <span className="text-neutral-dark">Stay ahead in the fast-moving world of tech</span>
             </li>
           </ul>
 
           <div className="card-light-blue p-6 rounded-xl border-l-4 border-blue-500">
-            <h3 className="text-xl font-semibold mb-3 text-neutral-dark">💡 โฟกัสหลัก:</h3>
+            <h3 className="text-xl font-semibold mb-3 text-neutral-dark">💡 Focus:</h3>
             <p className="text-neutral-dark">
-              การพัฒนาเว็บสมัยใหม่, React.js, Next.js, TypeScript, เครื่องมือ AI และเทคนิคเพิ่มประสิทธิภาพการทำงาน
+              Modern web development, React.js, Next.js, TypeScript, AI tools, and productivity hacks.
             </p>
           </div>
         </div>
 
         <div className="card p-8 mb-8 animate-fade-in-up stagger-3">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">สิ่งที่ผมเชื่อ</h2>
+          <h2 className="text-3xl font-bold mb-6 gradient-text">What I Believe</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">⚡</span>
                 <div>
-                  <h4 className="font-semibold text-lg">ทำงานฉลาด &gt; ทำงานหนัก</h4>
-                  <p className="text-neutral-600">ใช้เครื่องมือและเทคโนโลยีเพื่อทำให้ชีวิตง่ายขึ้น</p>
+                  <h4 className="font-semibold text-lg">Smart Work &gt; Hard Work</h4>
+                  <p className="text-neutral-600">Use tools and tech to make your life easier</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">🛠️</span>
                 <div>
-                  <h4 className="font-semibold text-lg">เรียนรู้ด้วยการลงมือทำ</h4>
-                  <p className="text-neutral-600">ทดลอง สร้าง และแบ่งปันความรู้ที่ใช้ได้จริง</p>
+                  <h4 className="font-semibold text-lg">Hands-On Learning</h4>
+                  <p className="text-neutral-600">Experiment, build, and share knowledge that works in the real world</p>
                 </div>
               </div>
             </div>
@@ -65,15 +65,15 @@ export default function AboutPage() {
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">🤹‍♂️</span>
                 <div>
-                  <h4 className="font-semibold text-lg">โค้ด + AI ไปด้วยกัน</h4>
-                  <p className="text-neutral-600">ผสมผสานการเขียนโปรแกรมกับ AI เพื่อแก้ปัญหาที่ซับซ้อนอย่างมีประสิทธิภาพ</p>
+                  <h4 className="font-semibold text-lg">Code & AI Together</h4>
+                  <p className="text-neutral-600">Combine programming with AI to solve complex problems efficiently</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">🌱</span>
                 <div>
-                  <h4 className="font-semibold text-lg">การเรียนรู้ร่วมกัน</h4>
-                  <p className="text-neutral-600">การเรียนรู้จะมีค่ามากขึ้นเมื่อเราแบ่งปัน</p>
+                  <h4 className="font-semibold text-lg">Community & Growth</h4>
+                  <p className="text-neutral-600">Learning is better when shared</p>
                 </div>
               </div>
             </div>
@@ -81,60 +81,60 @@ export default function AboutPage() {
         </div>
 
         <div className="card p-8 mb-8 animate-fade-in-up stagger-4">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">ทำไมต้อง MOSBytes</h2>
+          <h2 className="text-3xl font-bold mb-6 gradient-text">Why MOSBytes</h2>
           
           <p className="text-lg leading-relaxed mb-6">
-            ที่นี่คุณจะได้เจอบทความ เทคนิค และการทดลองที่ถูกสร้างมาเพื่อช่วยให้คุณ:
+            Here, you&apos;ll find tutorials, tips, and experiments built to help you:
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">🧹</span>
-                <span>เขียนโค้ดที่สะอาดและดูแลต่อได้ง่าย</span>
+                <span>Write cleaner, maintainable code</span>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">📚</span>
-                <span>เรียนรู้ framework และ library สมัยใหม่อย่างมีประสิทธิภาพ</span>
+                <span>Learn modern frameworks and libraries effectively</span>
               </div>
             </div>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">🧠</span>
-                <span>นำ AI มาช่วยในการโค้ดและเพิ่ม productivity ในชีวิตประจำวัน</span>
+                <span>Apply AI in everyday coding and productivity</span>
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-2xl">✨</span>
-                <span>อยากรู้อยากเห็น เรียนรู้ไว และสร้างสรรค์มากขึ้น</span>
+                <span>Stay curious, learn faster, and create more</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="card p-8 mb-8 animate-fade-in-up stagger-5">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">เรื่องเล่าสนุก ๆ 🤓</h2>
+          <h2 className="text-3xl font-bold mb-6 gradient-text">Fun Fact 🤓</h2>
           
           <div className="space-y-4">
             <div className="flex items-start space-x-3">
               <span className="text-2xl">☕</span>
-              <span>ผมดื่ม <strong>กาแฟเยอะเกินไป</strong> ตอนเขียนโค้ด</span>
+              <span>I drink <strong>way too much coffee</strong> while coding</span>
             </div>
             <div className="flex items-start space-x-3">
               <span className="text-2xl">🤖</span>
-              <span>ผมชอบลอง <strong>เขียน prompt เล่นทุกวัน</strong></span>
+              <span>I experiment with <strong>AI prompts daily</strong></span>
             </div>
             <div className="flex items-start space-x-3">
               <span className="text-2xl">🎉</span>
-              <span>บางครั้งก็เขียนโค้ดแค่เพราะ “สนุกดี!”</span>
+              <span>Sometimes I write code just for the joy of it!</span>
             </div>
           </div>
         </div>
 
         <div className="card p-8 bg-gradient-to-br from-blue-50 to-purple-50 animate-fade-in-up stagger-6">
-          <h2 className="text-3xl font-bold mb-6 gradient-text">มาติดต่อกันเถอะ</h2>
+          <h2 className="text-3xl font-bold mb-6 gradient-text">Let&apos;s Connect</h2>
           
           <p className="text-lg leading-relaxed mb-6">
-            มีไอเดีย คำถาม หรือโปรเจกต์เจ๋ง ๆ ที่อยากแชร์ไหม? ติดต่อผมได้ผ่านช่องทางเหล่านี้:
+            Got ideas, questions, or cool projects to share? Reach out via:
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
           <div className="mt-8 p-6 bg-white rounded-lg border-l-4 border-green-500">
             <p className="text-center text-lg font-semibold text-neutral-800">
-              📬 สมัครรับจดหมายข่าวเพื่อไม่พลาดเทคนิคและบทเรียน AI ที่ใช้ได้จริง!
+              📬 Join the newsletter to get practical tutorials and AI-powered tips straight to your inbox!
             </p>
           </div>
         </div>

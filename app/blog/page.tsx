@@ -127,9 +127,9 @@ export default async function BlogListPage() {
           <p className="text-lg text-neutral-medium mb-8 max-w-2xl mx-auto">
             สมัครรับข่าวสารเพื่อรับบทความและเทคนิคล่าสุดจาก MOSBytes
           </p>
-          <Link href="/" className="btn btn-primary text-lg px-8 py-4 hover-lift">
+          {/* <Link href="/" className="btn btn-primary text-lg px-8 py-4 hover-lift">
             สมัครรับข่าวสาร
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
