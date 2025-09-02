@@ -314,6 +314,15 @@ a:hover {
   }
 }
 
+@keyframes jiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
 /* Animation Classes */
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
@@ -351,6 +360,10 @@ a:hover {
 
 .animate-bounce-in {
   animation: bounce-in 0.6s ease-out forwards;
+}
+
+.group:hover .logo-jiggle {
+  animation: jiggle 0.5s ease-in-out;
 }
 
 /* Stagger Delays */

@@ -2,8 +2,8 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto p-8">
       <div className="text-center mb-12">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-primary-600 animate-fade-in-up">
-          เกี่ยวกับ MOSBytes 👋
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+          <span className="gradient-text">เกี่ยวกับ MOSBytes</span> 👋
         </h1>
         <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
           สวัสดีครับ ผม Mos ที่นี่ผมจะมาแบ่งปันความรู้และเทคนิคการพัฒนาเว็บไซต์และ AI

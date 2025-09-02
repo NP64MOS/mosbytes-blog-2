@@ -39,8 +39,8 @@ export default async function BlogListPage() {
     <div className="max-w-6xl mx-auto p-8">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text text-primary-600 animate-fade-in-up">
-          บล็อก MOSBytes 📝
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+          <span className="gradient-text">บล็อก MOSBytes</span> 📝
         </h1>
         <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
           ค้นพบความรู้ เทคนิค และแนวทางใหม่ๆ ในการพัฒนาเว็บไซต์และ AI
@@ -121,8 +121,8 @@ export default async function BlogListPage() {
       {/* Newsletter CTA */}
       <div className="mt-20 text-center">
         <div className="card-light-blue p-12">
-          <h2 className="text-3xl font-bold mb-4 gradient-text">
-            อย่าพลาดบทความใหม่! 🚀
+          <h2 className="text-3xl font-bold mb-4">
+            <span className="gradient-text">อย่าพลาดบทความใหม่!</span> 🚀
           </h2>
           <p className="text-lg text-neutral-medium mb-8 max-w-2xl mx-auto">
             สมัครรับข่าวสารเพื่อรับบทความและเทคนิคล่าสุดจาก MOSBytes

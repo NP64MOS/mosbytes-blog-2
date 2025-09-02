@@ -49,7 +49,7 @@ export default function Navbar() {
               className="flex items-center space-x-2 group"
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300 logo-jiggle">
                   M
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full animate-pulse" />

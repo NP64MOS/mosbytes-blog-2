@@ -73,7 +73,7 @@ export default function LandingPage() {
           {/* Floating Elements */}
           <div className="absolute top-10 left-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse-glow" />
           <div className="absolute top-20 right-20 w-3 h-3 bg-purple-500 rounded-full animate-pulse-glow" style={{ animationDelay: '0.5s' }} />
-          <div className="absolute bottom-20 left-20 w-2 h-2 bg-pink-500 rounded-full animate-pulse-glow" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-20 left-20 w-2 h-2 bg-orange-400 rounded-full animate-pulse-glow" style={{ animationDelay: '1s' }} />
           
           <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Badge */}
